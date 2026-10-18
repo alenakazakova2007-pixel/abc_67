@@ -1,0 +1,126 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>История и обзор языка Python</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Язык программирования Python</h1>
+        <p>Подробный обзор истории, возможностей и примеров кода</p>
+    </header>
+
+    <main>
+        <nav class="table-of-contents">
+            <h2>Содержание статьи</h2>
+            <ul>
+                <li><a href="#history">1. История создания</a></li>
+                <li><a href="#overview">2. Краткий обзор языка</a></li>
+                <li><a href="#code-examples">3. Примеры кода</a></li>
+            </ul>
+        </nav>
+
+        <hr>
+
+        <section id="history">
+            <h2>1. История создания</h2>
+            <img src="img1.jpg" alt="Гвидо ван Россум" class="img-left">
+            <p>Разработка языка <strong>Python</strong> началась в конце 1980-х годов сотрудником голландского института CWI <mark>Гвидо ван Россумом</mark>. Язык задумывался как преемник языка ABC, способный работать в операционной системе Amoeba и взаимодействовать с системными вызовами.</p>
+            <p>Первый официальный релиз (версия 0.9.0) состоялся в <em>феврале 1991 года</em>. Название языка произошло вовсе не от семейства пресмыкающихся, а в честь популярного британского комедийного телешоу <u>«Летающий цирк Монти Пайтона»</u>, фанатом которого являлся автор.</p>
+            <div class="clearfix"></div>
+        </section>
+
+        <section id="overview">
+            <h2>2. Краткий обзор языка</h2>
+            <img src="img2.jpg" alt="Логотип Python" class="img-right">
+            <p>Python — это высокоуровневый, интерпретируемый язык программирования общего назначения. Его философия ставит в главу угла <abbr title="Читаемость кода">читаемость</abbr> и лаконичность синтаксиса. Основные области применения сегодня — это <dfn>Data Science</dfn>, веб-разработка, автоматизация скриптов и машинное обучение.</p>
+            
+            <h3>Ключевые особенности (Маркированный список):</h3>
+            <ul class="standard-list">
+                <li>Динамическая типизация;</li>
+                <li>Автоматическое управление памятью (со сборщиком мусора);</li>
+                <li>Кроссплатформенность и поддержка мультипарадигмальности.</li>
+            </ul>
+
+            <h3>Популярные библиотеки (Список с картинкой-маркером):</h3>
+            <ul class="image-list">
+                <li>Django (Веб-разработка)</li>
+                <li>NumPy (Вычисления)</li>
+                <li>Pandas (Анализ данных)</li>
+            </ul>
+
+            <h3>Этапы развития (Нумерованный список):</h3>
+            <ol>
+                <li>Python 1.0 — появление базовых функциональных инструментов (1994 г.).</li>
+                <li>Python 2.0 — введение списковых включений и сборщика мусора (2000 г.).</li>
+                <li>Python 3.0 — кардинальная переработка и отказ от обратной совместимости (2008 г.).</li>
+            </ol>
+
+            <h3>Сравнение версий Python</h3>
+            <table class="versions-table">
+                <caption>Хронология ключевых версий</caption>
+                <thead>
+                    <tr>
+                        <th>Версия</th>
+                        <th>Дата релиза</th>
+                        <th>Главное нововведение</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Python 1.0</td>
+                        <td>Январь 1994</td>
+                        <td>Лямбда-функции, map, filter</td>
+                    </tr>
+                    <tr>
+                        <td>Python 2.0</td>
+                        <td>Октябрь 2000</td>
+                        <td>Списковые включения (List comprehensions)</td>
+                    </tr>
+                    <tr>
+                        <td>Python 3.0</td>
+                        <td>Декабрь 2008</td>
+                        <td>Полный переход на Unicode по умолчанию</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="clearfix"></div>
+        </section>
+
+        <section id="code-examples">
+            <h2>3. Примеры кода</h2>
+            <p>Ниже представлена классическая программа, демонстрирующая синтаксис языка:</p>
+            
+            <pre class="code-block"><code><span class="keyword">def</span> <span class="function">greet_user</span>(<span class="param">name</span>):
+    <span class="comment"># Функция приветствия пользователя</span>
+    <span class="keyword">if</span> <span class="param">name</span> == <span class="string">"Admin"</span>:
+        <span class="keyword">print</span>(<span class="string">"Доступ разрешен. Привет, Администратор!"</span>)
+    <span class="keyword">else</span>:
+        <span class="keyword">print</span>(f<span class="string">"Привет, {name}!"</span>)
+
+<span class="function">greet_user</span>(<span class="string">"Pythonist"</span>)</code></pre>
+
+            <div class="center-box">
+                <img src="img3.jpg" alt="Код Python" class="img-center">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <address>
+            Для получения дополнительной информации посетите <a href="https://python.org" target="_blank" rel="noopener">Официальный сайт Python</a>.
+        </address>
+        
+        <div class="report">
+            <h3>Использованные HTML-теги (32 шт):</h3>
+            <p>html, head, meta, title, link, body, header, h1, h2, h3, p, main, nav, ul, li, a, hr, section, img, strong, mark, em, u, div, abbr, dfn, ol, table, caption, thead, tr, th, tbody, td, pre, code, span, footer, address.</p>
+            
+            <h3>Использованные CSS-свойства (42 шт):</h3>
+            <p>font-family, font-size, font-weight, font-style, color, background-color, text-align, text-decoration, line-height, margin, margin-left, margin-right, margin-top, margin-bottom, padding, padding-left, border, border-collapse, border-radius, width, max-width, height, display, float, clear, list-style-type, list-style-image, box-shadow, vertical-align, text-transform, letter-spacing, cursor, transition, opacity, position, border-bottom, content, background, overflow, border-spacing, white-space, word-spacing.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
