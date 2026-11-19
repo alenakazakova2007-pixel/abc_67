@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #1a1a2e;
+}
+
+/* Сцена с 3D-перспективой */
+.scene {
+  width: 200px;
+  height: 200px;
+  perspective: 800px;
+  transition: transform 0.4s ease;
+}
+
+/* Плавное увеличение при наведении (transition) */
+.scene:hover {
+  transform: scale(1.15);
+}
+
+/* Сам 3D-куб */
+.cube {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotateCube 10s infinite linear;
+}
+
+/* Пауза вращения при наведении курсора */
+.scene:hover .cube {
+  animation-play-state: paused;
+
+}
+
+/* Общие стили для всех 6 граней */
+.face {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 2px solid #ffffff;
+  background-color: #000000;
+}
+
+.face img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Расположение граней в 3D-пространстве (transform) */
+.front  { transform: rotateY(0deg) translateZ(100px); }
+.back   { transform: rotateY(180deg) translateZ(100px); }
+.right  { transform: rotateY(90deg) translateZ(100px); }
+.left   { transform: rotateY(-90deg) translateZ(100px); }
+.top    { transform: rotateX(90deg) translateZ(100px); }
+.bottom { transform: rotateX(-90deg) translateZ(100px); }
+
+/* Поочередный показ всех 6 граней куба */
+@keyframes rotateCube {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  16% {
+    transform: rotateX(-15deg) rotateY(-90deg);
+  }
+  33% {
+    transform: rotateX(15deg) rotateY(-180deg);
+  }
+  50% {
+    transform: rotateX(-15deg) rotateY(-270deg);
+  }
+  66% {
+    transform: rotateX(-90deg) rotateY(-360deg);
+  }
+  83% {
+    transform: rotateX(90deg) rotateY(-360deg);
+  }
+  100% {
+    transform: rotateX(0deg) rotateY(-360deg);
+  }
+}
