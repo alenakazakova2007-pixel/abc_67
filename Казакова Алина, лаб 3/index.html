@@ -1,0 +1,122 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вариант 8 — Заявка на получение кредита</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Заявка на получение кредита в банке</h1>
+
+    <form action="#" method="post" class="credit-form">
+
+      <fieldset>
+        <legend>Личные данные заёмщика</legend>
+
+        <div class="form-row">
+          <label for="fullname">ФИО полностью:</label>
+          <input type="text" id="fullname" name="fullname" placeholder="ФИО полностью (например, Иванов Иван Иванович)" required>
+        </div>
+
+        <div class="form-row">
+          <label for="birthdate">Дата рождения:</label>
+          <input type="date" id="birthdate" name="birthdate" required>
+        </div>
+
+        <div class="form-row">
+          <label for="phone">Контактный телефон:</label>
+          <input type="tel" id="phone" name="phone" placeholder="Телефон: +7 (999) 000-00-00" required>
+        </div>
+
+        <div class="form-row">
+          <label for="email">Электронная почта:</label>
+          <input type="email" id="email" name="email" placeholder="Электронная почта (example@mail.ru)" required>
+        </div>
+
+        <div class="form-row">
+          <label for="city">Город проживания:</label>
+          <input type="text" id="city" name="city" list="cities" placeholder="Выберите или введите город">
+          <datalist id="cities">
+            <option value="Москва">
+            <option value="Санкт-Петербург">
+            <option value="Красноярск">
+            <option value="Новосибирск">
+            <option value="Екатеринбург">
+          </datalist>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Параметры кредита и занятость</legend>
+
+        <div class="form-row">
+          <label for="purpose">Цель кредитования:</label>
+          <select id="purpose" name="purpose">
+            <optgroup label="Потребительские цели">
+              <option value="cash">Наличные на любые цели</option>
+              <option value="repair">Ремонт квартиры или дома</option>
+              <option value="education">Оплата обучения</option>
+            </optgroup>
+            <optgroup label="Целевые программы">
+              <option value="auto">Автокредит</option>
+              <option value="refinance">Рефинансирование кредитов</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label for="amount">Сумма кредита (руб.):</label>
+          <input type="number" id="amount" name="amount" min="30000" max="5000000" step="10000" placeholder="Сумма кредита в рублях (от 30 000)" required>
+        </div>
+
+        <div class="form-row">
+          <label for="term">Срок кредита (лет): <output id="termOut">3</output></label>
+          <input type="range" id="term" name="term" min="1" max="7" value="3" oninput="termOut.value = this.value">
+        </div>
+
+        <div class="form-row">
+          <label for="income">Ежемесячный доход (руб.):</label>
+          <input type="number" id="income" name="income" min="15000" placeholder="Ежемесячный доход в рублях" required>
+        </div>
+
+        <div class="form-row">
+          <label>Тип занятости:</label>
+          <div class="radio-group">
+            <input type="radio" id="emp-staff" name="employment" value="staff" checked>
+            <label for="emp-staff" class="inline-label">Работа по найму</label>
+
+            <input type="radio" id="emp-ip" name="employment" value="ip">
+            <label for="emp-ip" class="inline-label">ИП / Самозанятый</label>
+
+            <input type="radio" id="emp-pension" name="employment" value="pension">
+            <label for="emp-pension" class="inline-label">Пенсионер</label>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="doc">Скан паспорта или 2-НДФЛ:</label>
+          <input type="file" id="doc" name="doc" accept=".pdf,.jpg,.png">
+        </div>
+
+        <div class="form-row">
+          <label for="comment">Дополнительная информация:</label>
+          <textarea id="comment" name="comment" rows="3" placeholder="Дополнительная информация о доходах или поручителях"></textarea>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Согласие на обработку данных</legend>
+        <div class="checkbox-row">
+          <input type="checkbox" id="agree" name="agree" required>
+          <label for="agree" class="always-visible">Я подтверждаю достоверность данных и согласен на проверку кредитной истории</label>
+        </div>
+      </fieldset>
+
+      <div class="buttons">
+        <button type="submit" class="btn-submit">Отправить заявку</button>
+        <button type="reset" class="btn-reset">Очистить форму</button>
+      </div>
+
+    </form>
+  </div>
+</body>
+</html>
